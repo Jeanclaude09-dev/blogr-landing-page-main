@@ -2,7 +2,7 @@ import logo from "/src/assets/images/logo.svg"
 import { useState } from "react"
 
 export default function HeroSection() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
 
   const links = [
     {
@@ -22,8 +22,6 @@ export default function HeroSection() {
     }
   ];
 
-
-
   return (
     <section className="w-full bg-linear-to-r from-orange-300 via-red-500 to-red-550 min-h-125 rounded-bl-[100px] flex justify-center relative">
 
@@ -32,7 +30,6 @@ export default function HeroSection() {
 
       {/* container */}
       <div className="z-10 min-h-full min-w-2xs lg:min-w-6xl flex flex-col ">
-
 
 
         {/* content */}
@@ -44,15 +41,23 @@ export default function HeroSection() {
             <img src={logo} alt="blogr logo" />
           </a>
 
-          <div className="w-full hidden md:flex justify-between">
+          <div className="w-full hidden md:flex justify-between relative">
             <div className="flex gap-4 ">
-              {links.map((l) => (
-                <ul ley={l.id} className="flex items-center">
-                  <span className="flex items-center gap-2 cursor-pointer">
-                    <li>{l.link}</li>
-                    <img src="/images/icon-arrow-light.svg" className="max-w-3 max-h-3" />
+              {links.map((link) => (
+                <div ley={link.id} className="flex items-center">
+                  <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer">
+                    <span>{link.link}</span>
+                    <img src="/images/icon-arrow-light.svg" className={`max-w-3 max-h-3 duration-300 transform transition-transform ${isActive === link.id ? `rotate-180` : `rotate-0`}`} />
                   </span>
-                </ul>
+
+                  {isActive === link.id &&
+                    <div className="absolute -bottom-23 p-3 rounded-2xl bg-white text-gray-600 max-w-25">
+                      {link.options.map((option) => (
+                        <p key={option}>{option}</p>
+                      ))}
+                    </div>}
+                </div>
+
               ))}
             </div>
 
