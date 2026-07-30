@@ -5,7 +5,7 @@ import HeroSection from './component/hero'
 function App() {
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen flex flex-col gap-5">
       <HeroSection />
     </section>
   )
