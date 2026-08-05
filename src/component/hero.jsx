@@ -3,6 +3,7 @@ import { useState } from "react"
 
 export default function HeroSection() {
   const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const links = [
     {
@@ -26,7 +27,14 @@ export default function HeroSection() {
     <section className="w-full bg-linear-to-r from-orange-300 via-red-500 to-red-550 min-h-125 rounded-bl-[100px] flex justify-center relative">
 
       {/* background */}
-      <div className="absolute inset-0   bg-position-[10px]  bg-[url('/images/bg-pattern-intro-mobile.svg')] md:bg-[url('/images/bg-pattern-intro-desktop.svg')]" />
+      {/* <div className="absolute inset-0   bg-position-[10px]  bg-[url('/images/bg-pattern-intro-mobile.svg')] md:bg-[url('/images/bg-pattern-intro-desktop.svg')]" /> */}
+      <div className="absolute inset-0  img-bg" />
+
+      {isOpen === "true" && 
+        <div className="w-2/3 bg-white h-screen">
+
+        </div>
+      }
 
       {/* container */}
       <div className="z-10 px-8 py-4 md:py-0 md:p-0 min-h-full min-w-2xs lg:min-w-6xl flex flex-col ">
@@ -35,17 +43,19 @@ export default function HeroSection() {
         {/* content */}
 
         {/* nav */}
-        <nav className="flex items-center py-2 text-white/70 gap-10" >
+        <nav className="flex items-center justify-between  py-2 text-white/70 gap-10" >
 
+          {/* left nav */}
           <a href="#">
             <img src={logo} alt="blogr logo" />
           </a>
-
-          <div className="w-full hidden md:flex justify-between relative">
-            <div className="flex gap-4 ">
+          
+          {/* Right nav */}
+          <div className="w-full flex justify-between relative">
+            <div className="flex gap-4 hidden md:flex ">
               {links.map((link) => (
                 <div ley={link.id} className="flex items-center">
-                  <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer">
+                  <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer hover:text-white hover:underline transition-all duration-300 ease">
                     <span>{link.link}</span>
                     <img src="/images/icon-arrow-light.svg" className={`max-w-3 max-h-3 duration-300 transform transition-transform ${isActive === link.id ? `rotate-180` : `rotate-0`}`} />
                   </span>
@@ -53,7 +63,7 @@ export default function HeroSection() {
                   {isActive === link.id &&
                     <div className="absolute -bottom-28  p-5  rounded-lg bg-white text-gray-600 min-w-25">
                       {link.options.map((option) => (
-                        <p key={option} className="cursor-pointer hover:text-gray-950  transform duration-300">{option}</p>
+                        <p key={option} className="cursor-pointer hover:text-gray-950  transform duration-300 ">{option}</p>
                       ))}
                     </div>}
                 </div>
@@ -61,16 +71,19 @@ export default function HeroSection() {
               ))}
             </div>
 
-            <div className="flex gap-1.5">
-              <button className="cursor-pointer py-2 px-6 rounded-full text-white text-bold ">Login</button>
-              <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 text-bold">sign in</button>
+            <div className="flex gap-1.5 hidden md:flex">
+              <button className="cursor-pointer py-2 px-6 rounded-full text-white">Login</button>
+              <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">sign in</button>
             </div>
 
-            <a href="#">
-              <img className="md:hidden" src="/images/icon-hamburger.svg" alt="menu" />
-            </a>
 
           </div>
+
+            {/* hamberger menu */}
+            <a href="#" className="md:hidden hover:cursor-pointer">
+              <img  src="/images/icon-hamburger.svg" alt="menu"  />
+            </a>
+
         </nav>
 
         {/* hero content */}
@@ -79,8 +92,8 @@ export default function HeroSection() {
           <h2 className="text-2xl lg:text-3xl text-center text-white/75">Grow your audience and build your online brand</h2>
 
           <div className="flex gap-3 mt-4">
-            <button className="cursor-pointer py-3 px-6 rounded-full bg-white text-red-550 text-bold">Start for Free</button>
-            <button className="cursor-pointer py-3 px-6 rounded-full border border-white  text-bold ">Learn More</button>
+            <button className="cursor-pointer py-3 px-6 rounded-full bg-white text-red-550 font-semibold hover:font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">Start for Free</button>
+            <button className="cursor-pointer py-3 px-6 rounded-full border border-white hover:bg-white hover:semibold hover:text-red-550 transition-color duration-300 font-semibold ">Learn More</button>
           </div>
 
         </section>

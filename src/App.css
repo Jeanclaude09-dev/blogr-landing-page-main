@@ -26,3 +26,8 @@
   --color-purple-900: hsl(237, 23%, 31%);
 }
 
+.img-bg {
+  background: url(/images/bg-pattern-intro-mobile.svg) no-repeat;
+  background-position: right;
+  background-size: 120%;
+}
