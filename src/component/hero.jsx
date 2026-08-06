@@ -1,3 +1,4 @@
+import { Modal } from "./Drawer";
 import logo from "/src/assets/images/logo.svg"
 import { useState } from "react"
 
@@ -30,7 +31,7 @@ export default function HeroSection() {
       {/* <div className="absolute inset-0   bg-position-[10px]  bg-[url('/images/bg-pattern-intro-mobile.svg')] md:bg-[url('/images/bg-pattern-intro-desktop.svg')]" /> */}
       <div className="absolute inset-0  img-bg" />
 
-      {isOpen === "true" && 
+      {isOpen === "true" &&
         <div className="w-2/3 bg-white h-screen">
 
         </div>
@@ -49,10 +50,10 @@ export default function HeroSection() {
           <a href="#">
             <img src={logo} alt="blogr logo" />
           </a>
-          
+
           {/* Right nav */}
           <div className="w-full flex justify-between relative">
-            <div className="flex gap-4 hidden md:flex ">
+            <div className="gap-4 hidden md:flex ">
               {links.map((link) => (
                 <div ley={link.id} className="flex items-center">
                   <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer hover:text-white hover:underline transition-all duration-300 ease">
@@ -71,7 +72,7 @@ export default function HeroSection() {
               ))}
             </div>
 
-            <div className="flex gap-1.5 hidden md:flex">
+            <div className="gap-1.5 hidden md:flex">
               <button className="cursor-pointer py-2 px-6 rounded-full text-white">Login</button>
               <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">sign in</button>
             </div>
@@ -79,10 +80,10 @@ export default function HeroSection() {
 
           </div>
 
-            {/* hamberger menu */}
-            <a href="#" className="md:hidden hover:cursor-pointer">
-              <img  src="/images/icon-hamburger.svg" alt="menu"  />
-            </a>
+          {/* hamberger menu */}
+          <a href="#" className="md:hidden hover:cursor-pointer" onClick={() => setIsOpen(true)} onClose={() => setIsOpen(false)}>
+            <img src="/images/icon-hamburger.svg" alt="menu" />
+          </a>
 
         </nav>
 
