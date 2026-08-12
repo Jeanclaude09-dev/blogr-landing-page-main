@@ -14,17 +14,20 @@ export const Nav = () => {
       id: 0,
       link: "Product",
       options: [
-        { id: 0, label: "Contact" },
-        { id: 1, label: "Contact" },
-        { id: 2, label: "Contact" }]
+        { id: 0, label: "Overview" },
+        { id: 1, label: "Pricing" },
+        { id: 2, label: "Marketplace" },
+        { id: 3, label: "Features" },
+        { id: 4, label: "Integrations" }]
     },
     {
       id: 1,
       link: "Company",
       options: [
-        { id: 0, label: "Contact" },
-        { id: 1, label: "Contact" },
-        { id: 2, label: "Contact" }]
+        { id: 0, label: "About" },
+        { id: 1, label: "Team" },
+        { id: 2, label: "Blog" },
+        { id: 3, label: "Careers" }]
     },
     {
       id: 2,
