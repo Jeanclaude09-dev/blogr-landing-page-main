@@ -48,7 +48,7 @@ export const Nav = () => {
     </a>
 
     {/* Right nav */}
-    <div className="w-full flex justify-between relative">
+    <div className="w-full flex justify-between ">
       <div className="gap-4 hidden md:flex ">
         {links.map((link) => (
           <div key={link.id} className="flex items-center">
@@ -58,7 +58,7 @@ export const Nav = () => {
             </span>
 
             {isActive === link.id &&
-              <div className="absolute -bottom-28  p-5  rounded-lg bg-white text-gray-600 min-w-25">
+              <div className="absolute top-full  p-5  rounded-lg bg-white text-gray-600 min-w-25">
                 {link.options.map((option) => (
                   <p key={option.id} className="cursor-pointer hover:text-gray-950  transform duration-300 ">{option.label}</p>
                 ))}
