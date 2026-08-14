@@ -44,7 +44,7 @@ export const Nav = () => {
 
     {/* left nav */}
     <a href="#">
-      <img src={logo} alt="blogr logo" />
+      <img src="/images/logo.svg" alt="blogr logo" />
     </a>
 
     {/* Right nav */}
