@@ -52,15 +52,15 @@ export const Nav = () => {
       <div className="gap-4 hidden md:flex ">
         {links.map((link) => (
           <div key={link.id} className="flex items-center">
-            <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer hover:text-white hover:underline transition-all duration-300 ease">
+            <span onClick={() => setIsActive(isActive === link.id ? null : link.id)} className="flex items-center gap-2 cursor-pointer hover:text-white hover:underline transition-all duration-200 ease">
               <span>{link.link}</span>
-              <img src="/images/icon-arrow-light.svg" className={`max-w-3 max-h-3 duration-300 transform transition-transform ${isActive === link.id ? `rotate-180` : `rotate-0`}`} />
+              <img src="/images/icon-arrow-light.svg" className={`max-w-3 max-h-3 duration-200 transform transition-transform ${isActive === link.id ? `rotate-180` : `rotate-0`}`} />
             </span>
 
             {isActive === link.id &&
               <div className="absolute top-full  p-5  rounded-lg bg-white text-gray-600 min-w-25">
                 {link.options.map((option) => (
-                  <p key={option.id} className="cursor-pointer hover:text-gray-950  transform duration-300 ">{option.label}</p>
+                  <p key={option.id} className="cursor-pointer hover:text-gray-950  transform duration-200 ">{option.label}</p>
                 ))}
               </div>}
           </div>
@@ -70,7 +70,7 @@ export const Nav = () => {
 
       <div className="gap-1.5 hidden md:flex">
         <button className="cursor-pointer py-2 px-6 rounded-full text-white">Login</button>
-        <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">sign in</button>
+        <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-200">sign in</button>
       </div>
 
     </div>
@@ -122,7 +122,7 @@ export const Nav = () => {
 
       <div className="flex flex-col gap-3 items-center">
         <button className="font-semibold text-gray-600">Login</button>
-        <button className="cursor-pointer py-2 px-6 rounded-full bg-red-550 text-white font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">sign in</button>
+        <button className="cursor-pointer py-2 px-6 rounded-full bg-red-550 text-white font-semibold hover:bg-white/40 hover:text-white transition-color duration-200">sign in</button>
       </div>
 
     </Dropdown>

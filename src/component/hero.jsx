@@ -25,8 +25,8 @@ export default function HeroSection() {
           <h2 className="text-2xl lg:text-3xl text-center text-white/75">Grow your audience and build your online brand</h2>
 
           <div className="flex gap-3 mt-4">
-            <button className="cursor-pointer py-3 px-6 rounded-full bg-white text-red-550 font-semibold hover:font-semibold hover:bg-white/40 hover:text-white transition-color duration-300">Start for Free</button>
-            <button className="cursor-pointer py-3 px-6 rounded-full border border-white hover:bg-white hover:semibold hover:text-red-550 transition-color duration-300 font-semibold ">Learn More</button>
+            <button className="cursor-pointer py-3 px-6 rounded-full bg-white text-red-550 font-semibold hover:font-semibold hover:bg-white/40 hover:text-white transition-color duration-200">Start for Free</button>
+            <button className="cursor-pointer py-3 px-6 rounded-full border border-white hover:bg-white hover:semibold hover:text-red-550 transition-color duration-200 font-semibold ">Learn More</button>
           </div>
 
         </section>

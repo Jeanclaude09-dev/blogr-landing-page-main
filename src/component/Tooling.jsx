@@ -24,7 +24,6 @@ export const Tooling = () => {
           capable of producing even the most complicated sites.</p>
       </div>
 
-
     </section>
   </section>
 }
