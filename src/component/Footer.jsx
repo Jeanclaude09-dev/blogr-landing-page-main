@@ -1,3 +1,5 @@
+import { Container } from "./Container"
+
 export const Footer = () => {
 
   const links = [
@@ -30,26 +32,25 @@ export const Footer = () => {
       ]
     }
   ];
-
-  return (<footer className="bg-gray-950 text-white rounded-tr-[45px]">
-
-    <div className="max-w-6xl mx-auto px6 py-16">
-      {/* Main grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-14 ">
-        <div className="col-span-1 ">
-          <img src="/images/logo.svg" alt="blogr logo" />
-        </div>
-        {links.map((link) => (
-          <div key={link.id} >
-            <h3 className="font-bold  mb-5">{link.link}</h3>
-            <ul className="flex flex-col gap-2">
-              {link.options.map((option) => (
-                <li key={option.id} className="text-sm cursor-pointer text-white/40 hover:text-white transition-colors">{option.label}</li>
-              ))}
-            </ul>
+  return (
+    <footer className="w-full bg-gray-950 text-white rounded-tr-[45px]">
+      <Container className="py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-14">
+          <div className="col-span-1">
+            <img src="/images/logo.svg" alt="blogr logo" />
           </div>
-        ))}
-      </div>
-    </div>
-  </footer>)
+          {links.map((link) => (
+            <div key={link.id}>
+              <h3 className="font-bold mb-5">{link.link}</h3>
+              <ul className="flex flex-col gap-2">
+                {link.options.map((option) => (
+                  <li key={option.id} className="text-sm cursor-pointer text-white/40 hover:text-white transition-colors">{option.label}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </footer>
+  )
 }

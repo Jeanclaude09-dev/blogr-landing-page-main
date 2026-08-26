@@ -70,7 +70,7 @@ export const Nav = () => {
 
       <div className="gap-1.5 hidden md:flex">
         <button className="cursor-pointer py-2 px-6 rounded-full text-white">Login</button>
-        <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-200">sign in</button>
+        <button className="cursor-pointer py-2 px-6 rounded-full bg-white text-red-550 font-semibold hover:bg-white/40 hover:text-white transition-color duration-200">Sign Up</button>
       </div>
 
     </div>
