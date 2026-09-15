@@ -9,7 +9,7 @@ import { Footer } from './component/Footer'
 function App() {
 
   return (
-    <section className="min-h-screen flex flex-col gap-5">
+    <section className="min-h-screen flex flex-col ">
       <HeroSection />
       <Features />
       <Infrastructure />

@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: Overpass;
+  src: url(assets/font/Overpass/OFL.txt) format("truetype");
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url(assets/font/Ubuntu/UFL.txt) format("truetype");
+}
+
 @theme {
   /* Primary */
 
@@ -31,3 +41,19 @@
   background-position: right;
   background-size: 120%;
 }
+/* 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Overpass;
+}
+
+p,
+span,
+a,
+li {
+  font-family: ubuntu;
+} */

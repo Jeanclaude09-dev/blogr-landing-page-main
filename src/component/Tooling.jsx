@@ -4,14 +4,14 @@ import { Container } from "./Container";
 
 export const Tooling = () => {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16 relative">
       <Container className="grid md:grid-cols-2 gap-8 items-center">
-        <picture>
+
+        <picture className="">
           <source media="(max-width: 768px)" srcSet={illustrationMobile} />
           <source media="(min-width: 769px)" srcSet={illustrationDesktop} />
           <img src={illustrationMobile} alt="laptop illustration" />
         </picture>
-
         <div className="flex flex-col gap-6">
           <div>
             <h3 className="text-blue-900 text-2xl mb-3">Free, open, simple</h3>
