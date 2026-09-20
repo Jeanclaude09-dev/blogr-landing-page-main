@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import HeroSection from './component/hero'
-import { Features } from './component/Features'
-import { Infrastructure } from './component/Infrastructure'
-import { Tooling } from './component/Tooling'
-import { Footer } from './component/Footer'
+import { useState } from "react";
+import "./App.css";
+import HeroSection from "./component/hero";
+import { Features } from "./component/Features";
+import { Infrastructure } from "./component/Infrastructure";
+import { Tooling } from "./component/Tooling";
+import { Footer } from "./component/Footer";
 
 function App() {
-
   return (
-    <section className="min-h-screen flex flex-col ">
+    <main className="min-h-screen flex flex-col ">
       <HeroSection />
       <Features />
       <Infrastructure />
       <Tooling />
       <Footer />
-    </section>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
